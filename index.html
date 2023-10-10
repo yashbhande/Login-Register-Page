@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The <head> section contains important metadata about the page. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- This line links an external stylesheet (CSS file) for styling. -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- The <body> section contains the visible content of the webpage. -->
+    <!-- This div acts as the main container for our login and registration forms. -->
+    <div class="hero">
+        <!-- Inside the main container, we have a box for the forms. -->
+        <div class="form-box">
+            <!-- This div is for the buttons that allow us to switch between login and registration. -->
+            <div class="button-box">
+                <!-- The following div is an indicator that moves when we switch between forms. -->
+                <div id="btn"></div>
+                <!-- This button triggers the login form. -->
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <!-- This button triggers the registration form. -->
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <!-- This div holds social media icons, like Facebook, Twitter, and Google+. -->
+            <div class="social-icons">
+                <img src="fb.png" alt="">
+                <img src="tw.png" alt="">
+                <img src="gp.png" alt="">
+            </div>
+            <!-- The following is the login form. -->
+            <form class="input-group" id="login">
+                <!-- Input field for user ID. -->
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <!-- Input field for password. -->
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <!-- Checkbox to remember the password. -->
+                <input type="checkbox" class="check-box"> <span>Remember Password</span>
+                <!-- Button to submit the login form. -->
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <!-- This is the registration form. -->
+            <form class="input-group" id="register">
+                <!-- Input field for user ID. -->
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <!-- Input field for email. -->
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <!-- Input field for password. -->
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <!-- Checkbox to agree to terms and conditions. -->
+                <input type="checkbox" class="check-box"> <span>I agree to the terms & Conditions</span>
+                <!-- Button to submit the registration form. -->
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle form switching -->
+    <script>
+        // Get references to the login and registration forms, and the indicator button.
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        // Function to switch to the registration form.
+        function register() {
+            // Move the login form off the screen to the left.
+            x.style.left = "-400px";
+            // Move the registration form to the center of the screen.
+            y.style.left = "50px";
+            // Move the indicator button to the "Register" button.
+            z.style.left = "110px";
+        }
+
+        // Function to switch to the login form.
+        function login() {
+            // Move the login form to the center of the screen.
+            x.style.left = "50px";
+            // Move the registration form off the screen to the right.
+            y.style.left = "450px";
+            // Move the indicator button to the "Log In" button.
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>

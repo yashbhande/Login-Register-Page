@@ -1,0 +1,164 @@
+/* Reset styles for all HTML elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* 
+   Styles the hero section, which is the main background of the page.
+   It covers the entire viewport, includes a background image with a gradient overlay.
+*/
+.hero {
+    height: 100%; /* Make it take the full height of the viewport */
+    width: 100%; /* Make it take the full width of the viewport */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(banner.jpg);
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Scale the background image to cover the entire hero section */
+    position: absolute; /* Position it absolutely, so it doesn't affect other elements */
+}
+
+/* 
+   Styles the form-box, which is the container for login and registration forms.
+   It has a fixed width, centered margin, white background, and padding.
+   Overflow is hidden to prevent content from overflowing.
+*/
+.form-box {
+    width: 380px; /* Fixed width */
+    height: 480px; /* Fixed height */
+    position: relative; /* Allows for absolute positioning of child elements */
+    margin: 6% auto; /* Center it horizontally and give it some top margin */
+    background: #fff; /* White background */
+    padding: 5px; /* Add padding inside the box */
+    overflow: hidden; /* Hide content that overflows */
+}
+
+/* 
+   Styles the button-box, which is the container for toggle buttons.
+   It has a fixed width, centered margin, a box shadow, and rounded corners.
+*/
+.button-box {
+    width: 220px; /* Fixed width */
+    margin: 35px auto; /* Center it horizontally and give it top margin */
+    position: relative; /* Allows for absolute positioning of child elements */
+    box-shadow: 0 0 20px 9px #ff61241f; /* Adds a box shadow effect */
+    border-radius: 30px; /* Rounds the corners of the box */
+}
+
+/* 
+   Styles the toggle buttons for switching between login and registration forms.
+   They have padding, a pointer cursor, transparent background, and no border.
+*/
+.toggle-btn {
+    padding: 10px 30px; /* Add padding around the buttons */
+    cursor: pointer; /* Show a pointer cursor when hovering */
+    background: transparent; /* Transparent background */
+    border: 0; /* No border */
+    outline: none; /* Remove the outline when focused */
+    position: relative; /* Allows for positioning the indicator button */
+}
+
+/* 
+   Styles the indicator button that moves when toggling between login and registration forms.
+   It has a gradient background and rounded corners with a smooth transition effect.
+*/
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute; /* Allows for precise positioning within the button-box */
+    width: 110px; /* Fixed width */
+    height: 100%; /* Takes the full height of the button-box */
+    background: linear-gradient(to right, #ff105f, #ffad06); /* Gradient background */
+    border-radius: 30px; /* Rounded corners */
+    transition: 0.5s; /* Smooth transition effect for movement */
+}
+
+/* 
+   Styles the social-icons container, which holds social media icons.
+   It centers the icons and adds some margin.
+*/
+.social-icons {
+    margin: 30px auto; /* Center the icons horizontally and add margin */
+    text-align: center; /* Center the text content (icons) */
+}
+
+/* 
+   Styles individual social media icons with width, margin, box shadow, cursor, and rounded corners.
+*/
+.social-icons img {
+    width: 30px; /* Set a fixed width for the icons */
+    margin: 0 12px; /* Add horizontal margin between icons */
+    box-shadow: 0 0 20px 0 #7f7f7f3d; /* Adds a subtle box shadow effect */
+    cursor: pointer; /* Show a pointer cursor when hovering */
+    border-radius: 50%; /* Rounds the corners of the icons to make them circular */
+}
+
+/* 
+   Styles the input-group containers that hold input fields and checkboxes.
+   They have a fixed position, a specific width, and a transition effect for smooth movement.
+*/
+.input-group {
+    top: 180px; /* Position it vertically below the buttons */
+    position: absolute; /* Allows for precise positioning */
+    width: 280px; /* Fixed width */
+    transition: 0.5s; /* Smooth transition effect for movement */
+}
+
+/* 
+   Styles individual input fields with width, padding, margin, border, outline, and transparent background.
+*/
+.input-field {
+    width: 100%; /* Take up the full width of the input group */
+    padding: 10px 0; /* Add padding to the top and bottom */
+    margin: 5px 0; /* Add margin to the top and bottom */
+    border-left: 0; /* Remove the left border */
+    border-right: 0; /* Remove the right border */
+    border-top: 0; /* Remove the top border */
+    border-bottom: 1px solid #999; /* Add a bottom border with a subtle gray color */
+    outline: none; /* Remove the outline when focused */
+    background: transparent; /* Transparent background */
+}
+
+/* 
+   Styles the submit button with width, padding, cursor, and a gradient background.
+*/
+.submit-btn {
+    width: 85%; /* Take up most of the width of the input group */
+    padding: 10px 30px; /* Add padding around the button */
+    cursor: pointer; /* Show a pointer cursor when hovering */
+    display: block; /* Make it a block-level element for centering */
+    margin: auto; /* Center the button horizontally */
+    background: linear-gradient(to right, #ff105f, #ffad06); /* Gradient background */
+    border: 0; /* No border */
+    outline: none; /* Remove the outline when focused */
+    border-radius: 30px; /* Rounded corners */
+}
+
+/* 
+   Styles the checkbox with margin.
+*/
+.check-box {
+    margin: 30px 10px 30px 0; /* Add margin to position it properly */
+}
+
+/* 
+   Styles the text below the checkboxes with color, font size, and positioning.
+*/
+span {
+    color: #777; /* Set the text color */
+    font-size: 12px; /* Set the font size */
+    bottom: 68px; /* Position it slightly above the checkboxes */
+    position: absolute; /* Allows for precise positioning */
+}
+
+/* 
+   Styles the login and registration forms, positioning them off-screen initially.
+*/
+#login {
+    left: 50px; /* Position the login form to the left initially */
+}
+
+#register {
+    left: 450px; /* Position the registration form to the right initially */
+}
